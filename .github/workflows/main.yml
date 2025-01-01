@@ -24,6 +24,5 @@ jobs:
         # Authenticate Ngrok with your token
         ngrok config add-authtoken 2r2ZWHLk6CyOqaTGngTgdxGpIlt_7mhbgiYw4vJaR8aA1BjPk
 
-        # Start Ngrok tunnel
-        ngrok http 3000 > /dev/null &
-
+        # Start Ngrok tunnel with edge label
+        ngrok tunnel --label edge=edghts_2r2aTnB6FLCC8tC8HamQDEegU3p http://localhost:3000
